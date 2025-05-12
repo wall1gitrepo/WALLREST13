@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="gallery-wrapper">
+  <div class="main-card" id="mainCard"></div>
+  <div class="scrollable-row" id="scrollableRow"></div>
+</div>
+
+<style>
+  .gallery-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 20px;
+  }
+
+  .main-card {
+    width: 300px;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    position: relative;
+    transition: background-image 0.5s ease-in-out;
+  }
+
+  .main-card button {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+.scrollable-row {
+  display: flex;
+  overflow-x: auto;
+  gap: 15px;
+  padding: 10px 20px; /* Add horizontal padding */
+  width: 100%;
+  justify-content: flex-start;  
+  scroll-behavior: smooth;
+  scroll-padding: 20px;
+  scroll-snap-type: x mandatory;
+}
+
+
+  .scrollable-row::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  .scrollable-row::-webkit-scrollbar-thumb {
+    background: #999;
+    border-radius: 4px;
+  }
+
+  .card-preview {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    width: 150px;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+
+  .card-preview:hover {
+    transform: scale(1.05);
+  }
+
+  @media (max-width: 768px) {
+    .main-card {
+      width: 90%;
+      height: 300px;
+    }
+
+    .card-preview {
+      width: 120px;
+      height: 160px;
+    }
+  }
+</style>
+
+<script>
+  const cards = [
+    { img: "TAM POSTERS/TAM MOV FRONT.jpg", link: "collection.html" },
+    { img: "TAMIL ACTORS/ta front f.jpg", link: "tamilactors.html" },
+    { img: "ENG POSTERS/ENG FRONT.jpg", link: "engcollec.html" },
+    { img: "AVENGERS/AVENGER FRONT F.jpg", link: "avengercollec.html" },
+    { img: "FIGHT CLUB/FIGHT CLUB (10).jpg", link: "fightclub.html" },
+    { img: "BATMAN/BATMAN FRONT.jpg", link: "batman.html" },
+    { img: "CRICKET/CRICKET (3).jpg", link: "cricket.html" },
+    { img: "GTA/GTA FRONT.jpg", link: "gta.html" },
+    { img: "SPIDER MAN/SPIDEY FRONT.jpg", link: "spiderman.html" },
+    { img: "anime/AN FRONT.jpg", link: "anime.html" },
+    { img: "MOVIES/matrix.jpg", link: "matrix.html" },
+    { img: "MOVIES/inception.jpg", link: "inception.html" },
+    { img: "MOVIES/darkknight.jpg", link: "darkknight.html" }
+  ];
+
+  let currentIndex = 0;
+
+  function renderCards() {
+    const mainCard = document.getElementById("mainCard");
+    const scrollableRow = document.getElementById("scrollableRow");
+
+    const current = cards[currentIndex];
+    mainCard.style.backgroundImage = `url('${current.img}')`;
+    mainCard.innerHTML = `<a href="${current.link}" target="_blank">
+                            <button>Explore</button>
+                          </a>`;
+
+    scrollableRow.innerHTML = cards.map((card, index) => {
+      return `<div class="card-preview" style="background-image: url('${card.img}')" onclick="moveToCenter(${index})"></div>`;
+    }).join('');
+  }
+
+  function moveToCenter(index) {
+    if (index >= 0 && index < cards.length) {
+      currentIndex = index;
+      renderCards();
+    }
+  }
+
+  window.onload = renderCards;
+</script>
+
+  
+</body>
+</html>
+
+
+  

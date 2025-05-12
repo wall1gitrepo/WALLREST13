@@ -1,0 +1,126 @@
+.book-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px auto;
+    padding: 0 20px;
+    width: 100%;
+    max-width: 900px;
+    box-sizing: border-box;
+  }
+  
+  .book {
+    display: flex;
+    width: 100%;
+    aspect-ratio: 2 / 1.3; /* auto-scales height */
+    max-width: 800px;
+    perspective: 2000px;
+    position: relative;
+  }
+  
+  .page {
+    flex: 1;
+    margin: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    background: white;
+    overflow: hidden;
+    border-radius: 8px;
+  }
+  
+  .card-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .card-image {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .explore-btn-on-image {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .explore-btn-on-image:hover {
+    background-color: darkred;
+    transform: translateX(-50%) scale(1.05);
+  }
+  
+  .arrow {
+    background: #333;
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    z-index: 10;
+    transition: background 0.3s ease;
+  }
+  
+  .arrow:hover {
+    background: #555;
+  }
+  
+  .left-arrow,
+  .right-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .left-arrow {
+    left: -40px;
+  }
+  
+  .right-arrow {
+    right: -40px;
+  }
+  
+  /* ✅ Mobile responsiveness */
+  @media (max-width: 768px) {
+    .book {
+      aspect-ratio: unset;
+      height: auto;
+      flex-wrap: nowrap;
+    }
+  
+    .page {
+      margin: 5px;
+      min-height: 200px;
+    }
+  
+    .arrow {
+      font-size: 20px;
+      padding: 8px 12px;
+    }
+  
+    .left-arrow {
+      left: 5px;
+    }
+  
+    .right-arrow {
+      right: 5px;
+    }
+  
+    .explore-btn-on-image {
+      padding: 8px 16px;
+      font-size: 14px;
+    }
+  }
+  
+  

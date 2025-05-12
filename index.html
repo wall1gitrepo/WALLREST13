@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WallRest</title>
+    <link rel="stylesheet" href="samp1.css">
+</head>
+<body>
+    <a id="top"></a>
+ 
+    <nav class="navbar">
+        <div class="nav-logo">WALLREST</div>
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+        <ul class="nav-links" id="navLinks">
+        <li><a href="#top">Home</a></li>
+          <li><a href="#categories">collections</a></li>
+          <li><a href="#about">Delivery</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="cart" onclick="openCart()">
+        🛒 <span id="cart-count" class="cart-count">0</span>
+    </div>
+
+    <div class="front-image">
+      <!-- Background Video -->
+      <video autoplay muted loop class="background-video">
+        <source src="front_video.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+      </video>
+    
+      <div class="overlay"></div>
+    </div>
+      <!-- Text Content -->
+<div class="hero-text">
+  <h3 class="open-text">Make Your Walls Talk!</h3>
+  <p style="font-size: 1 rem; font-weight: 300; margin: 10px 0;">
+    <strong>From pop culture to abstract art find your perfect poster.</strong>
+  </p>
+  
+  <h4 style="font-size: 2rem; color: #e2dedf; margin: 20px 0;">Posters starting at just ₹59 ✨ </h4> 
+ <a href="#categories">
+  <button style="
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: bold;
+    background: linear-gradient(135deg, #ff416c, #ff4b2b);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;">
+    🛍️ Shop Now
+  </button>
+</a>
+
+  <h4 style="margin-top: 30px; font-style: italic; color: #ffffff;">Buy. Paste. Fascinate.</h4>
+</div>
+
+
+  
+  <br><br>
+  
+
+    <div class="slider-container">
+        <div class="slider">
+          <div class="slide">
+            <img src="pic1.jpg" alt="">
+            <img src="TAM ART (1).jpeg" alt="">
+            <img src="TAM ART (9).jpeg" alt="">
+            <img src="TAM ART (8).jpeg" alt="">
+
+        
+          </div>
+      
+          <div class="slide">
+            <!-- <img src="TAM ART (18).jpg" alt=""> -->
+
+            <img src="2.png" alt="">
+            <img src="BIKES (13).jpg" alt="">
+            <img src="anime1 (7).jpg" alt="">
+            <img src="CAR 22.jpeg" alt="">
+          </div>
+      
+          <div class="slide">
+            <img src="3.png" alt="">
+            <img src="TAM ART (18).jpg" alt="">
+            <img src="pic8.jpeg" alt="">
+            <img src="pic7.jpeg" alt="">
+          
+          </div>
+      
+          <div class="slide">
+            <img src="pic10.jpg" alt="">
+            <img src="pic6.jpg" alt="">
+            <img src="bg2.jpg" alt="">
+            <img src="pic9.jpg" alt="">
+
+
+           
+          </div>
+        </div>
+      </div>
+
+      <section class="offers-section">
+        <h2 class="offers-title"> Today's Hot Offers</h2>
+        <div class="offers-grid">
+          <div class="offer-card">
+            <div class="offer-icon">🎁</div>
+            <h3>Buy 3 Get 1 Free</h3>
+            <p>Add 3 items to cart and get 1 absolutely free!</p>
+          </div>
+          <div class="offer-card">
+            <div class="offer-icon">🛒</div>
+            <h3>Buy 5 Get 2 Free</h3>
+            <p>Perfect for bulk orders — 5 for the price of 3!</p>
+          </div>
+          <div class="offer-card">
+            <div class="offer-icon">⭐</div>
+            <h3>Flat 15% Off</h3>
+            <p>On all posters this weekend only.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="scrolling-gallery">
+        <div class="scroll-track">
+          <div class="scroll-item">
+            <img src="run10.jpeg" alt="Image 1">
+            <div class="overlay">This is a Sample image. <br>More in collections</div>
+          </div>
+          <div class="scroll-item">
+            <img src="run7.jpeg" alt="Image 2">
+            <div class="overlay">This is a Sample image. <br>More in collections</div>
+          </div>
+          <div class="scroll-item">
+            <img src="run3.jpeg" alt="Image 3">
+            <div class="overlay">This is a Sample image. <br>More in collections</div>
+          </div>
+          <div class="scroll-item">
+            <img src="run6.jpeg" alt="Image 4">
+            <div class="overlay">This is a Sample image. <br>More in collections</div>
+          </div>
+          <div class="scroll-item">
+            <img src="run4.jpeg" alt="Image 5">
+            <div class="overlay">This is a Sample image. <br>More in collections</div>
+          </div>
+          <div class="scroll-item">
+            <img src="run5.jpeg" alt="Image 6">
+            <div class="overlay">This is a Sample image. <br>More in collections</div>
+          </div>
+          <div class="scroll-item">
+            <img src="run2.jpeg" alt="Image 7">
+            <div class="overlay">This is a Sample image. <br>More in collections</div>
+          </div>
+          <div class="scroll-item">
+            <img src="run1.jpeg" alt="Image 8">
+            <div class="overlay">This is a Sample image. <br>More in collections</div>
+          </div>
+          <div class="scroll-item">
+            <img src="run8.jpeg" alt="Image 9">
+            <div class="overlay">This is a Sample image. <br>More in collections</div>
+          </div>
+          <div class="scroll-item">
+            <img src="run9.jpeg" alt="Image 10">
+            <div class="overlay">This is a Sample image. <br>More in collections</div>
+          </div>
+        </div>
+      </section>
+      
+<br><br>
+      <center><h2 id="categories"; class="offers-title" style="color: rgb(198, 63, 63);">COLLECTIONS</h2></center>
+
+      <div class="gallery-wrapper">
+  <div class="main-card" id="mainCard"></div>
+  <div class="scrollable-row" id="scrollableRow"></div>
+  </div>
+  
+
+
+      <div class="disc">
+        <p class="ask-text">
+            <em>Couldn't find your poster?</em>
+            <br><br>
+            <em>Need customized Posters?</em><br><br>
+            <a href="https://www.instagram.com/wallrest_23/profilecard/?igsh=a3lkeTRkYjVldzho" class="ask-button">ASK US</a>
+        </p>
+        <br><br>
+        <h2 class="disclaimer-title">DISCLAIMER</h2>
+        <br>
+        <div class="scroll-container">
+            <p class="disclaimer-text">
+               The collections are for reference and inspired by various platforms and events. 
+                Availability of listed and unlisted  items may vary. 
+                For inquiries, please send us a direct message (DM), and we will respond promptly with the necessary details.
+            </p>
+         </div>
+        </div>
+  
+    
+        <BR>
+        
+  
+  
+   
+  <center><h1 class="offers-title" id="about" style="color: rgb(245, 245, 14);">Delivery🛵</h1></center>
+
+
+      <section class="about-us">
+        <div class="about-container">
+          <div class="about-text">
+        
+            <p>
+              At <strong>WallRest</strong>, we  process and ship all orders within 4–6 business days. Delivery timelines may vary depending on your location and chosen shipping method.
+               For urgent orders or special delivery instructions, feel free to message us directly via Instagram or email.
+            </p>
+           
+   
+          </div>
+          <div class="about-image">
+            <img src="deli3.jpeg" alt="Team working together">
+          </div>
+        </div>
+      </section>
+      <br>
+
+      <center><h1 class="offers-title" id="contact" style="color: rgb(253, 249, 0);">CONTACT US</h1></center>
+
+ 
+      
+      
+      <section class="contact-card-section">
+        <div class="contact-card-wrapper">
+          <div class="contact-heading">
+            <!-- <h2>Reach Us</h2> -->
+            <p> We’re here to help you fascinate your walls</p>
+          </div>
+      
+          <div class="contact-cards">
+            <div class="contact-card">
+              <i class="fas fa-envelope"></i>
+              <h3>Follow Us</h3>
+              <p>@wallrest_23</p>
+            </div>
+      
+            <div class="contact-card">
+              <i class="fas fa-phone-alt"></i>
+              <h3>Call Us</h3>
+              <p>+91 93428 08502</p>
+            </div>
+      
+            <div class="contact-card">
+              <i class="fas fa-map-marker-alt"></i>
+              <h3>Email</h3>
+              <p>support@wallrest23.com</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <footer class="site-footer">
+        <div class="footer-container">
+          <div class="footer-logo">
+            <h2>WallRest</h2>
+            <p>"Poster up, Buttercup!" Because blank walls are boring !!</p>
+          </div>
+      
+          <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#courses">Tamil Posters</a></li>
+              <li><a href="#workshops">Tamil Artists</a></li>
+              <li><a href="about.html">English Artists</a></li>
+              <li><a href="#contact">Spiderman</a></li>
+            </ul>
+          </div>
+    
+      
+        <div class="footer-bottom">
+          <p>&copy; 2025 WallRest. All rights reserved.</p>
+        </div>
+      </footer>
+
+
+  <script>
+
+    function toggleMenu() {
+    const nav = document.getElementById('navLinks');
+    nav.classList.toggle('show');
+  }
+
+ 
+  const slider = document.getElementById("slider");
+  let autoScrollInterval;
+
+  function scrollSlider(direction) {
+    const slideWidth = slider.querySelector('.slide').offsetWidth + 32; // 32px gap
+    slider.scrollBy({
+      left: direction * slideWidth,
+      behavior: 'smooth'
+    });
+  }
+
+  const cards = [
+    { img: "TAM POSTERS/TAM MOV FRONT.jpg", link: "collection.html" },
+    { img: "TAMIL ACTORS/ta front f.jpg", link: "tamilactors.html" },
+    { img: "ENG POSTERS/ENG FRONT.jpg", link: "engcollec.html" },
+    { img: "AVENGERS/AVENGER FRONT F.jpg", link: "avengercollec.html" },
+    { img: "bts/K FRONT .jpg", link: "bts.html" },
+    { img: "BATMAN/BATMAN FRONT.jpg", link: "batman.html" },
+    { img: "CRICKET/CRICKET (3).jpg", link: "cricket.html" },
+    { img: "GTA/GTA FRONT.jpg", link: "gta.html" },
+    { img: "SPIDER MAN/SPIDEY FRONT.jpg", link: "spiderman.html" },
+    { img: "anime/AN FRONT.jpg", link: "anime.html" },
+    { img: "FOOTBALL/FOOTBALL FRONT .jpg", link: "football.html" },
+    { img: "CARS/CAR FRONT.jpg", link: "CARS.html" },
+    { img: "BIKE/bike front f.jpg", link: "bike.html" },
+    { img: "ARTIST/EMA FRONT F.jpg", link: "engartist.html" },
+    { img: "TAM ARTIST/TMA F.jpg", link: "tamilartist.html" },
+    { img: "GYM/GYM FRONT.jpg", link: "gym.html" },
+    { img: "GAMES/G FRONT.jpg", link: "games.html" },
+    { img: "QUOTES/QUOTES FRONT.jpg", link: "quotes.html" },
+    { img: "AESTHETICS/A FRONT .jpg", link: "aesthetics.html" },
+    { img: "FIGHT CLUB/FIGHT CLUB (10).jpg", link: "fightclub.html" }
+
+
+  ];
+
+  let currentIndex = 0;
+
+  function renderCards() {
+    const mainCard = document.getElementById("mainCard");
+    const scrollableRow = document.getElementById("scrollableRow");
+
+    const current = cards[currentIndex];
+    mainCard.style.backgroundImage = `url('${current.img}')`;
+    mainCard.innerHTML = `<a href="${current.link}" target="_blank">
+                            <button>Explore</button>
+                          </a>`;
+
+    scrollableRow.innerHTML = cards.map((card, index) => {
+      return `<div class="card-preview" style="background-image: url('${card.img}')" onclick="moveToCenter(${index})"></div>`;
+    }).join('');
+  }
+
+  function moveToCenter(index) {
+    if (index >= 0 && index < cards.length) {
+      currentIndex = index;
+      renderCards();
+    }
+  }
+
+  window.onload = renderCards;
+
+      </script>
+</body>
+</html>
